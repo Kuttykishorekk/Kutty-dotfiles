@@ -1,0 +1,88 @@
+{
+    "appearance": {
+        "font": {
+            "family": {
+                "sans": "Rubik",
+                "mono": "CaskaydiaCove Nerd Font",
+                "material": "Material Symbols Rounded",
+                "icons": "Material Symbols Rounded"
+            }
+        },
+        "transparency": {
+            "enabled": true,
+            "base": 0.3,
+            "layers": 0.2,
+            "blur": true,
+            "blurSize": 4,
+            "hover": {
+                "enabled": true,
+                "base": 0.8,
+                "blur": true,
+                "blurSize": 6
+            }
+        }
+    },
+    "bar": {
+        "persistent": false,
+        "showOnHover": true,
+        "background": "#00000080",
+        "hover": {
+            "background": "#000000CC",
+            "blur": true,
+            "blurSize": 6
+        },
+        "workspaces": {
+            "shown": 2
+        }
+    },
+    "launcher": {
+        "maxShown": 2,
+        "compact": true,
+        "iconSize": 32
+    },
+    "dashboard": {
+        "enabled": true
+    },
+    "sidebar": {
+        "enabled": true,
+        "background": "#00000080",
+        "hover": {
+            "background": "#000000CC",
+            "blur": true,
+            "blurSize": 6
+        },
+        "items": {
+            "notifications": {
+                "enabled": true,
+                "background": "#1A1A1A66",
+                "hover": {
+                    "background": "#1A1A1A99",
+                    "blur": true
+                }
+            },
+            "calendar": {
+                "enabled": true,
+                "background": "#1A1A1A66",
+                "hover": {
+                    "background": "#1A1A1A99",
+                    "blur": true
+                }
+            },
+            "system": {
+                "enabled": true,
+                "background": "#1A1A1A66",
+                "hover": {
+                    "background": "#1A1A1A99",
+                    "blur": true
+                },
+                "indicators": {
+                    "wifi": true,
+                    "bluetooth": true,
+                    "battery": true,
+                    "volume": true
+                }
+            }
+        }
+    }
+}
+
