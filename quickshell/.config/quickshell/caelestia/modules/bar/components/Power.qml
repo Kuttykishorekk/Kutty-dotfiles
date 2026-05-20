@@ -8,28 +8,53 @@ Item {
 
     required property DrawerVisibilities visibilities
 
-    implicitWidth: icon.implicitHeight + Tokens.padding.small * 2
-    implicitHeight: icon.implicitHeight
+    implicitWidth: Tokens.sizes.bar.innerWidth
+    implicitHeight: layout.implicitHeight
 
-    StateLayer {
-        // Cursed workaround to make the height larger than the parent
-        anchors.fill: undefined
-        anchors.centerIn: parent
-        implicitWidth: implicitHeight
-        implicitHeight: icon.implicitHeight + Tokens.padding.small * 2
-        radius: Tokens.rounding.full
-        onClicked: root.visibilities.session = !root.visibilities.session
-    }
-
-    MaterialIcon {
-        id: icon
+    Column {
+        id: layout
 
         anchors.centerIn: parent
-        anchors.horizontalCenterOffset: -1
+        spacing: Tokens.spacing.small
 
-        text: "power_settings_new"
-        color: Colours.palette.m3error
-        font.bold: true
-        font.pointSize: Tokens.font.size.normal
+        AnimatedImage {
+            id: cat
+
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            width: Tokens.sizes.bar.innerWidth + Tokens.padding.large * 3
+            height: width
+            source: Qt.resolvedUrl("../../../assets/final-cat.gif")
+            asynchronous: true
+            playing: true
+            cache: false
+            fillMode: AnimatedImage.PreserveAspectFit
+        }
+
+        Item {
+            id: button
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            implicitWidth: icon.implicitHeight + Tokens.padding.small * 1
+            implicitHeight: icon.implicitHeight + Tokens.padding.small * 1
+
+            StateLayer {
+                anchors.fill: parent
+                radius: Tokens.rounding.full
+                onClicked: root.visibilities.session = !root.visibilities.session
+            }
+
+            MaterialIcon {
+                id: icon
+
+                anchors.centerIn: parent
+                anchors.horizontalCenterOffset: -1
+
+                text: "power_settings_new"
+                color: Colours.palette.m3error
+                font.bold: true
+                font.pointSize: Tokens.font.size.normal
+            }
+        }
     }
 }
