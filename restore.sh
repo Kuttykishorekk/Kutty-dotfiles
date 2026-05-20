@@ -6,7 +6,7 @@
 
 set -e
 
-REPO_URL="https://github.com/your-username/kutty-dotfiles"  # Update this!
+REPO_URL="https://github.com/Kuttykishorekk/Kutty-dotfiles"  # Update this!
 INSTALL_DIR="$HOME/kutty-dotfiles"
 
 echo "🚀 Kutty's Dotfiles Quick Restore"
