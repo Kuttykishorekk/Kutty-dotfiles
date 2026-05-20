@@ -53,6 +53,11 @@
                 "foot"
             ]
         },
+        "idle": {
+            "inhibitWhenAudio": true,
+            "lockBeforeSleep": false,
+            "timeouts": []
+        },
         "battery": {
             "criticalLevel": 3,
             "warnLevels": [
