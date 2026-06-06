@@ -78,14 +78,6 @@ StyledRect {
                 role: "id"
 
                 DelegateChoice {
-                    roleValue: "wifi"
-                    delegate: Toggle {
-                        icon: "wifi"
-                        checked: Nmcli.wifiEnabled
-                        onClicked: Nmcli.toggleWifi()
-                    }
-                }
-                DelegateChoice {
                     roleValue: "bluetooth"
                     delegate: Toggle {
                         icon: "bluetooth"
