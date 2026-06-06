@@ -1,5 +1,11 @@
 {
     "appearance": {
+        "anim": {
+            "durations": {
+                "scale": 1.05
+            }
+        },
+        "deformScale": 1,
         "font": {
             "family": {
                 "material": "Material Symbols Rounded",
