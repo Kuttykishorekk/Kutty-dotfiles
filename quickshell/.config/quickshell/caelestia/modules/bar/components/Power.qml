@@ -17,18 +17,44 @@ Item {
         anchors.centerIn: parent
         spacing: Tokens.spacing.small
 
-        AnimatedImage {
-            id: cat
+        Item {
+            id: catHitbox
 
             anchors.horizontalCenter: parent.horizontalCenter
 
-            width: Tokens.sizes.bar.innerWidth + Tokens.padding.large * 3
-            height: width
-            source: Qt.resolvedUrl("../../../assets/final-cat.gif")
-            asynchronous: true
-            playing: true
-            cache: false
-            fillMode: AnimatedImage.PreserveAspectFit
+            readonly property var catGifs: [
+                "cat-scratches.gif",
+                "dance-cat.gif",
+                "final-cat.gif"
+            ]
+
+            property int gifIndex: 2
+
+            width: cat.width
+            height: cat.height
+
+            StateLayer {
+                anchors.fill: parent
+                onClicked: {
+                    catHitbox.gifIndex = (catHitbox.gifIndex + 1) % catHitbox.catGifs.length;
+                    cat.source = Qt.resolvedUrl("../../../assets/" + catHitbox.catGifs[catHitbox.gifIndex]);
+                    cat.playing = true;
+                }
+            }
+
+            AnimatedImage {
+                id: cat
+
+                anchors.centerIn: parent
+
+                width: Tokens.sizes.bar.innerWidth + Tokens.padding.large * 3
+                height: width
+                source: Qt.resolvedUrl("../../../assets/" + catHitbox.catGifs[catHitbox.gifIndex])
+                asynchronous: true
+                playing: true
+                cache: false
+                fillMode: AnimatedImage.PreserveAspectFit
+            }
         }
 
         Item {
