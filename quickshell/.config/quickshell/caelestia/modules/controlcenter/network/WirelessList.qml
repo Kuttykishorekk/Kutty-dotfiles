@@ -61,19 +61,6 @@ DeviceList {
             }
 
             ToggleButton {
-                toggled: Nmcli.wifiEnabled
-                icon: "wifi"
-                accent: "Tertiary"
-                iconSize: Tokens.font.size.normal
-                horizontalPadding: Tokens.padding.normal
-                verticalPadding: Tokens.padding.smaller
-
-                onClicked: {
-                    Nmcli.toggleWifi(null);
-                }
-            }
-
-            ToggleButton {
                 toggled: Nmcli.scanning
                 icon: "wifi_find"
                 accent: "Secondary"
