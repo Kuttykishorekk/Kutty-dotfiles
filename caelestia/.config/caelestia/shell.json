@@ -14,13 +14,36 @@
             }
         },
         "transparency": {
-            "base": 0.3,
+            "base": 0.18179365335051545,
             "enabled": true,
-            "layers": 0.2
+            "layers": 0.5260228737113402
+        }
+    },
+    "background": {
+        "desktopClock": {
+            "background": {
+                "enabled": false
+            },
+            "enabled": true,
+            "shadow": {
+                "opacity": 0.7299671519886364
+            }
         }
     },
     "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": true
+        },
+        "clock": {
+            "background": false,
+            "showDate": false
+        },
         "persistent": true,
+        "popouts": {
+            "statusIcons": true,
+            "tray": true
+        },
         "scrollActions": {
             "brightness": true,
             "volume": true,
@@ -34,14 +57,29 @@
             "showKbLayout": false,
             "showLockStatus": true,
             "showMicrophone": false,
-            "showNetwork": true
+            "showNetwork": false,
+            "showWifi": true
+        },
+        "tray": {
+            "background": false,
+            "compact": false,
+            "recolour": false
         },
         "workspaces": {
+            "maxWindowIcons": 5,
+            "occupiedBg": true,
             "shown": 2
         }
     },
+    "border": {
+        "rounding": 32,
+        "thickness": 5
+    },
     "dashboard": {
         "enabled": true,
+        "performance": {
+            "showBattery": true
+        },
         "showOnHover": true
     },
     "general": {
@@ -58,11 +96,6 @@
             "terminal": [
                 "foot"
             ]
-        },
-        "idle": {
-            "inhibitWhenAudio": true,
-            "lockBeforeSleep": false,
-            "timeouts": []
         },
         "battery": {
             "criticalLevel": 3,
@@ -86,6 +119,12 @@
                     "message": "PLUG THE CHARGER RIGHT NOW!!",
                     "title": "Critical battery level"
                 }
+            ]
+        },
+        "idle": {
+            "inhibitWhenAudio": true,
+            "lockBeforeSleep": false,
+            "timeouts": [
             ]
         }
     },
