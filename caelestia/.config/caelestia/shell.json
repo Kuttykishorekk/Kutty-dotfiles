@@ -32,7 +32,7 @@
             "background": false,
             "showDate": false
         },
-        "persistent": false,
+        "persistent": true,
         "popouts": {
             "statusIcons": true,
             "tray": true
