@@ -6,13 +6,6 @@
             }
         },
         "deformScale": 1,
-        "font": {
-            "family": {
-                "material": "Material Symbols Rounded",
-                "mono": "CaskaydiaCove Nerd Font",
-                "sans": "Rubik"
-            }
-        },
         "transparency": {
             "base": 0.18179365335051545,
             "enabled": true,
@@ -39,7 +32,7 @@
             "background": false,
             "showDate": false
         },
-        "persistent": true,
+        "persistent": false,
         "popouts": {
             "statusIcons": true,
             "tray": true
