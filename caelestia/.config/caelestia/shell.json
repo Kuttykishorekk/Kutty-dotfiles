@@ -5,11 +5,23 @@
                 "scale": 1.05
             }
         },
-        "deformScale": 1,
+        "deformScale": 1.05,
+        "padding": {
+            "scale": 0.5
+        },
+        "rounding": {
+            "scale": 0.8
+        },
+        "sizes": {
+            "scale": 0.85
+        },
+        "spacing": {
+            "scale": 1.5
+        },
         "transparency": {
-            "base": 0.18179365335051545,
+            "base": 0.55,
             "enabled": true,
-            "layers": 0.5260228737113402
+            "layers": 0.75
         }
     },
     "background": {
@@ -21,19 +33,61 @@
             "shadow": {
                 "opacity": 0.7299671519886364
             }
-        }
+        },
+        "wallpaperEnabled": false
     },
     "bar": {
         "activeWindow": {
             "compact": true,
-            "inverted": true
+            "inverted": true,
+            "showOnHover": true
         },
         "clock": {
             "background": false,
-            "showDate": false
+            "showDate": false,
+            "showIcon": true
         },
-        "persistent": true,
+        "entries": [
+            {
+                "enabled": true,
+                "id": "logo"
+            },
+            {
+                "enabled": true,
+                "id": "workspaces"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "activeWindow"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": false,
+                "id": "tray"
+            },
+            {
+                "enabled": true,
+                "id": "clock"
+            },
+            {
+                "enabled": true,
+                "id": "statusIcons"
+            },
+            {
+                "enabled": true,
+                "id": "power"
+            }
+        ],
+        "persistent": false,
         "popouts": {
+            "activeWindow": true,
             "statusIcons": true,
             "tray": true
         },
@@ -43,35 +97,58 @@
             "workspaces": true
         },
         "showOnHover": true,
-        "status": {
-            "showAudio": false,
-            "showBattery": true,
-            "showBluetooth": true,
-            "showKbLayout": false,
-            "showLockStatus": true,
-            "showMicrophone": false,
-            "showNetwork": false,
-            "showWifi": true
-        },
+        "statusIcons": [
+            {
+                "enabled": false,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": false,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "battery"
+            }
+        ],
         "tray": {
-            "background": false,
-            "compact": false,
-            "recolour": false
+            "background": true,
+            "compact": true,
+            "recolour": true
         },
         "workspaces": {
+            "activeIndicator": true,
+            "activeTrail": true,
             "maxWindowIcons": 5,
             "occupiedBg": true,
-            "shown": 2
+            "shown": 3
         }
     },
     "border": {
         "rounding": 32,
-        "thickness": 5
+        "thickness": 10
     },
     "dashboard": {
         "enabled": true,
         "performance": {
-            "showBattery": true
+            "showBattery": true,
+            "showStorage": false
         },
         "showOnHover": true
     },
@@ -124,7 +201,7 @@
     "launcher": {
         "hiddenApps": [
         ],
-        "maxShown": 2,
+        "maxShown": 7,
         "showOnHover": false
     },
     "notifs": {
@@ -148,6 +225,7 @@
         "defaultPlayer": "Spotify",
         "maxVolume": 1,
         "smartScheme": true,
+        "useFahrenheit": false,
         "useTwelveHourClock": false
     },
     "sidebar": {

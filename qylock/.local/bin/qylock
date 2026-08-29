@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Stable PATH entry for HyDE / hypridle. Do not kill this after lock starts.
+exec "$HOME/.local/share/quickshell-lockscreen/lock.sh" "$@"

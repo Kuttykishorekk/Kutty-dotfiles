@@ -1,6 +1,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Effects
 import Caelestia.Config
 import qs.components
 import qs.components.effects
@@ -48,6 +49,17 @@ StyledRect {
     implicitHeight: size
     radius: Tokens.rounding.full
     color: Colours.palette.m3primary
+
+    layer.enabled: true
+    layer.effect: MultiEffect {
+        shadowEnabled: true
+        shadowColor: Colours.palette.m3primary
+        shadowBlur: 1.0
+        shadowScale: 1.25
+        shadowOpacity: 0.5
+        shadowVerticalOffset: 0
+        shadowHorizontalOffset: 0
+    }
 
     Colouriser {
         source: root.mask

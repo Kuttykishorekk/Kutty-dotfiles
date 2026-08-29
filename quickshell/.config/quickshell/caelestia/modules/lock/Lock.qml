@@ -9,6 +9,12 @@ import qs.components.misc
 Scope {
     property alias lock: lock
 
+    function activateQylock(): void {
+        // Prefer external qylock so Caelestia and qylock never race.
+        // Do not touch Caelestia WlSessionLock or loginctl here.
+        Quickshell.execDetached(["/home/kutty/.local/bin/qylock"]);
+    }
+
     WlSessionLock {
         id: lock
 
@@ -45,7 +51,7 @@ Scope {
         // qmllint enable unresolved-type
         name: "lock"
         description: "Lock the current session"
-        onPressed: lock.locked = true
+        onPressed: activateQylock()
     }
 
     // qmllint disable unresolved-type
@@ -58,10 +64,12 @@ Scope {
 
     IpcHandler {
         function lock(): void {
-            lock.locked = true;
+            activateQylock();
         }
 
         function unlock(): void {
+            // Only release Caelestia's own lock surface if it was ever taken.
+            // Do not call loginctl unlock-session (that armed hypridle kill hooks).
             lock.unlock();
         }
 

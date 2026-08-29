@@ -3,6 +3,6 @@
 -- Settings
 hl.config({
     general = {
-        gaps_in = 0,
+        gaps_in = 1,
     },
 })
