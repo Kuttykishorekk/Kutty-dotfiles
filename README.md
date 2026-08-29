@@ -7,6 +7,7 @@ A portable configuration repository for **Hyprland**, **Caelestia**, and **Quick
 - **Hyprland** - Wayland compositor configuration
 - **Caelestia** - Desktop environment configs
 - **QuickShell** - GUI framework configurations
+- **qylock** - Quickshell session lock (Clockwork theme + HyDE/hypridle wiring)
 
 ## 🚀 Quick Start
 
@@ -50,8 +51,13 @@ kutty-dotfiles/
 │   └── .config/hypr/     # Stow directory - will symlink to ~/.config/hypr
 ├── caelestia/            # Caelestia configs
 │   └── .config/caelestia/
-└── quickshell/           # QuickShell configs
-    └── .config/quickshell/
+├── quickshell/           # QuickShell / Caelestia shell configs
+│   └── .config/quickshell/
+└── qylock/               # Session lock (qylock + clockwork theme)
+    ├── .config/qylock/
+    ├── .config/uwsm/
+    ├── .local/bin/qylock
+    └── .local/share/quickshell-lockscreen/
 ```
 
 ## 🔧 How It Works

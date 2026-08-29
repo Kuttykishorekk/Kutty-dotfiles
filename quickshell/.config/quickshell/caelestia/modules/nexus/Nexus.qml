@@ -20,11 +20,15 @@ Item {
 
     signal close
 
-    implicitWidth: implicitHeight * Tokens.sizes.nexus.ratio
-    implicitHeight: nState.screen.height * Tokens.sizes.nexus.heightMult
+    implicitWidth: Math.round(implicitHeight * Tokens.sizes.nexus.ratio * 0.75)
+    implicitHeight: Math.round(nState.screen.height * Tokens.sizes.nexus.heightMult * 0.8)
 
     Behavior on blobColour {
         CAnim {}
+    }
+
+    TapHandler {
+        onTapped: root.focus = true
     }
 
     BlobGroup {

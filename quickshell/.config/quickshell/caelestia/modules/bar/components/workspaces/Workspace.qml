@@ -50,9 +50,9 @@ ColumnLayout {
             const activeLabel = Config.bar.workspaces.activeLabel || (root.isOccupied ? occupiedLabel : label);
             return root.activeWsId === root.ws ? activeLabel : root.isOccupied ? occupiedLabel : label;
         }
-        color: Config.bar.workspaces.occupiedBg || root.isOccupied || root.activeWsId === root.ws ? Colours.palette.m3onSurface : Colours.layer(Colours.palette.m3outlineVariant, 2)
+        color: root.activeWsId === root.ws ? Colours.palette.m3onSurface : (Config.bar.workspaces.occupiedBg || root.isOccupied ? Colours.palette.m3primary : Colours.layer(Colours.palette.m3outlineVariant, 2))
         verticalAlignment: Qt.AlignVCenter
-        font.family: "Rubik" // Hard code rubik for now since google sans doesn't play well with certain unicode symbols apparently
+        font.family: Tokens.font.workspaces
     }
 
     Loader {
@@ -105,7 +105,7 @@ ColumnLayout {
 
                     grade: 0
                     text: Icons.getAppCategoryIcon(modelData.lastIpcObject.class, "terminal")
-                    color: Colours.palette.m3onSurfaceVariant
+                    color: root.activeWsId === root.ws ? Colours.palette.m3onSurfaceVariant : Colours.palette.m3primary
                 }
             }
         }
