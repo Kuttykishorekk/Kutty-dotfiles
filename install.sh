@@ -73,6 +73,9 @@ done
 echo "✓ Backups created at: $BACKUP_DIR"
 echo ""
 
+# Ensure necessary directories exist
+mkdir -p "$HOME/.config" "$HOME/.local/bin" "$HOME/.local/share" "$HOME/.local/state"
+
 # Stow each config directory
 echo "🔗 Creating symlinks with GNU Stow..."
 cd "$SCRIPT_DIR"
@@ -86,6 +89,9 @@ for config_dir in "${CONFIG_DIRS[@]}"; do
         echo "   ⚠️  $config_dir not found, skipping..."
     fi
 done
+
+# Ensure executable permissions on all scripts
+chmod +x "$HOME/.local/bin/"* 2>/dev/null || true
 
 echo ""
 echo "✅ Installation complete!"

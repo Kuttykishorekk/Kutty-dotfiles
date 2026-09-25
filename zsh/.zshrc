@@ -40,3 +40,14 @@ alias django_test="make django_test"
 
 # Source custom plugins manually if they aren't in OMZ plugins path 
 # (But they are in ~/.oh-my-zsh/custom/plugins, so OMZ handles them)
+export PATH="$HOME/.local/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/kutty/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/kutty/.opencode/bin:$PATH
+export OPENROUTER_API_KEY="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"
+
+export PATH="$HOME/.local/bin:$PATH"
