@@ -81,6 +81,9 @@ hl.exec_cmd("hyprctl dispatch exec '~/.local/bin/hypr-plugins-boot.sh'")
 -- Start awww wallpaper daemon
 hl.exec_cmd("hyprctl dispatch exec 'pgrep -x awww-daemon || awww-daemon --format xrgb'")
 
+-- Start HyprPet desktop pet daemon on boot
+hl.exec_cmd("hyprctl dispatch exec 'pgrep -f \"python3.*hyprpet.py\" || ~/.local/bin/hyprpet'")
+
 -- ═══════════════════════════════════════════════════════════
 --  Custom keybinding overrides (restored from old config)
 -- ═══════════════════════════════════════════════════════════
@@ -129,6 +132,10 @@ hl.bind(MOD .. " + SHIFT + K", hl.dsp.exec_cmd("~/.local/bin/fix-keyboard-state.
 -- Phantom / Super Sus: toggle chat <-> gameplay (Super+Shift+Y)
 hl.bind(MOD .. " + SHIFT + Y", hl.dsp.exec_cmd("~/.local/bin/phantom-toggle"),
 	{description = "[Gaming] Super Sus toggle chat / gameplay"})
+
+-- HyprPet desktop pet companion toggle (Super + ^ to start or kill)
+hl.bind(MOD .. " + code:34", hl.dsp.exec_cmd("~/.local/bin/hyprpet-toggle"),
+	{description = "[HyprPet] toggle desktop pet (start / kill)"})
 
 -- Launcher apps (old keybindings)
 local hyde_lib = os.getenv("HOME") .. "/.local/lib/hyde"
