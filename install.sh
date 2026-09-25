@@ -7,7 +7,25 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CONFIG_DIRS=("hyprland" "caelestia" "quickshell" "qylock")
+CONFIG_DIRS=(
+    "hyprland"
+    "caelestia"
+    "quickshell"
+    "qylock"
+    "kitty"
+    "zsh"
+    "hyprpet"
+    "hyde"
+    "waybar"
+    "rofi"
+    "dunst"
+    "wlogout"
+    "fastfetch"
+    "cava"
+    "starship"
+    "btop"
+    "scripts"
+)
 
 echo "🔧 Kutty's Dotfiles Installer"
 echo "================================"

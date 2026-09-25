@@ -1,0 +1,3 @@
+#!/bin/sh
+pkill -f "python3.*hyprpet.py" || true
+notify-send -u low -i preferences-desktop-theme "HyprPet" "Pet dismissed" 2>/dev/null || true

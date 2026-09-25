@@ -1,0 +1,123 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](ct_bg)\
+$os\
+$username\
+[](bg:ct_green fg:ct_bg)\
+$directory\
+[](bg:ct_blue fg:ct_green)\
+$git_branch\
+[](bg:ct_yellow fg:ct_blue)\
+$git_status\
+$git_metrics\
+[](bg:ct_purple fg:ct_yellow)\
+$python\
+$nodejs\
+$rust\
+[](bg:ct_cyan fg:ct_purple)\
+$cmd_duration\
+$time\
+[ ](fg:ct_cyan)\
+$line_break$character"""
+
+right_format = """$memory_usage"""
+
+palette = 'mocha_custom'
+
+[palettes.mocha_custom]
+ct_bg     = '#1E1E2E'
+ct_blue   = '#89B4FA'
+ct_green  = '#A6E3A1'
+ct_yellow = '#F9E2AF'
+ct_purple = '#CBA6F7'
+ct_cyan   = '#74C7EC'
+ct_text   = '#CDD6F4'
+
+[os]
+disabled = false
+style = "bg:ct_bg fg:ct_text"
+
+[os.symbols]
+Arch = "󰣇"
+Linux = "󰌽"
+Macos = "󰀵"
+Windows = "󰍲"
+
+[username]
+show_always = true
+style_user = "bg:ct_bg fg:ct_text"
+style_root = "bg:ct_bg fg:ct_red"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:ct_green fg:ct_bg"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:ct_blue fg:ct_bg"
+format = '[[ $symbol $branch ](bg:ct_blue fg:ct_bg)]($style)'
+
+[git_status]
+conflicted = ' 󰳦 '
+ahead = ' 󰶣 '
+behind = ' 󰶡 '
+diverged = ' 󰹹 '
+untracked = ' 󱗗 '
+stashed = ''
+modified = ' 󰏫 '
+staged = ' 󰐖 '
+renamed = ' 󰑕 '
+deleted = ' 󰆴 '
+style = "bg:ct_yellow fg:ct_bg"
+format = '[[($all_status$ahead_behind )](bg:ct_yellow fg:ct_bg)]($style)'
+
+[git_metrics]
+disabled = false
+only_nonzero_diffs = true
+format = '[([+$added]($added_style) )([-$deleted]($deleted_style) )](bg:ct_yellow)'
+added_style = "bold fg:ct_bg bg:ct_yellow"
+deleted_style = "bold fg:ct_bg bg:ct_yellow"
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = "󰍛 "
+style = "bold fg:ct_cyan"
+format = "$symbol$ram $ram_total"
+
+[python]
+symbol = ""
+style = "bg:ct_purple fg:ct_bg"
+format = '[[ $symbol( $version) ](bg:ct_purple fg:ct_bg)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:ct_purple fg:ct_bg"
+format = '[[ $symbol( $version) ](bg:ct_purple fg:ct_bg)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:ct_purple fg:ct_bg"
+format = '[[ $symbol( $version) ](bg:ct_purple fg:ct_bg)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:ct_cyan fg:ct_bg"
+format = '[[❤ $time ](bg:ct_cyan fg:ct_bg)]($style)'
+
+[cmd_duration]
+min_time = 0
+style = "bg:ct_cyan fg:ct_bg"
+format = '[[󱎫 $duration ](bg:ct_cyan fg:ct_bg)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = '[](bold fg:ct_green)'
+error_symbol = '[](bold fg:ct_red)'

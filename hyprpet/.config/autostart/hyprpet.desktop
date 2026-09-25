@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=HyprPet
+Comment=Desktop Companion Pet for Hyprland
+Exec=/home/kutty/.local/bin/hyprpet
+Terminal=false
+Categories=Utility;
+X-GNOME-Autostart-enabled=true

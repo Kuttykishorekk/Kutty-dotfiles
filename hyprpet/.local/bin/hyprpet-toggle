@@ -1,0 +1,8 @@
+#!/bin/sh
+if pgrep -f "python3.*hyprpet.py" >/dev/null 2>&1; then
+    pkill -f "python3.*hyprpet.py"
+    notify-send -u low -i preferences-desktop-theme "HyprPet" "Pet dismissed" 2>/dev/null || true
+else
+    "$HOME/.local/bin/hyprpet" >/dev/null 2>&1 &
+    notify-send -u low -i preferences-desktop-theme "HyprPet" "Pet started 🕷️" 2>/dev/null || true
+fi
