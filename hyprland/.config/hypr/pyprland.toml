@@ -26,3 +26,13 @@
     command   = "[term_with_class] console-dropdown"
     max_size  = "90% 100%"
     size      = "75% 60%"
+
+[scratchpads.ai_agent]
+    # AI Coding Agent drop-down scratchpad (Super + Alt + A)
+    animation = "fromTop"
+    class     = "ai-agent-dropdown"
+    command   = "[term_with_class] ai-agent-dropdown -e zsh -c 'agy || zsh'"
+    max_size  = "95% 95%"
+    size      = "80% 75%"
+    lazy      = true
+

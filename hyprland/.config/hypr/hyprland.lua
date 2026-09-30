@@ -143,6 +143,8 @@ hl.bind(MOD .. " + T", hl.dsp.exec_cmd("kitty"),
 	{description = "[Launcher|Apps] terminal emulator"})
 hl.bind(MOD .. " + ALT + T", hl.dsp.exec_cmd("hyde-shell pypr toggle console"),
 	{description = "[Launcher|Apps] dropdown terminal"})
+hl.bind(MOD .. " + ALT + A", hl.dsp.exec_cmd("hyde-shell pypr toggle ai_agent"),
+	{description = "[Launcher|AI] dropdown AI agent scratchpad"})
 hl.bind(MOD .. " + E", hl.dsp.exec_cmd("dolphin"),
 	{description = "[Launcher|Apps] dolphin file explorer"})
 hl.bind(MOD .. " + C", hl.dsp.exec_cmd("cursor"),

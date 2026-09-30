@@ -26,10 +26,13 @@ eval "$(starship init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# AI Integration - Mate Assistant
+# AI Integration - Mate & Agent Tools
 alias mate="~/.local/bin/mate"
 alias mate-debug="~/.local/bin/mate-debug"
 alias mate-packages="~/.local/bin/mate-packages"
+alias aifix="ai-fix"
+alias aicommit="ai-commit"
+alias aiexplain="ai-explain"
 
 # Environment Paths
 export PATH="$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
